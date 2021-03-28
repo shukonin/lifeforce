@@ -1,0 +1,361 @@
+/* General */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;900&display=swap');
+
+:root {
+  --black: #141414;
+  --white: #fbfdfe;
+  --green: #7ed957;
+  --blue: #5270ff;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  color: var(--white);
+}
+
+body {
+  background-color: var(--black);
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+header {
+  margin: 4rem 25rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+li a {
+  margin: 0 2rem;
+  font-size: 2rem;
+  font-family: 'Monserrat', sans-serif;
+  text-decoration: none;
+  color: var(--white);
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+/* General purposes */
+
+.section-container {
+  margin: 10rem 25rem;
+}
+
+.section-title {
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 5rem;
+}
+
+.section-paragraph {
+  color: var(--white);
+  font-size: 1.8rem;
+  width: 70%;
+}
+
+.section-paragraph strong {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+/* Hero */
+#hero {
+  height: 95vh;
+}
+
+#hero-image {
+  position: absolute;
+  background-image: url('../assets/images/plant.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(80%);
+  width: 100%;
+  height: 95vh;
+}
+
+#hero-titles {
+  position: relative;
+  margin: 0 25rem;
+  padding: 10rem 0;
+}
+
+#hero-title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 8rem;
+  margin: 0;
+}
+
+#hero-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.7rem;
+  margin: 0;
+  font-size: 3.2rem;
+  color: var(--green);
+}
+
+/* Avatars */
+.avatars-container {
+  margin: 10rem 15rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-photo {
+  background-image: url(../assets/images/fer.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  height: 25rem;
+  width: 25rem;
+}
+
+.avatar-name {
+  color: var(--green);
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+
+.avatar-paragraph {
+  text-align: center;
+  font-size: 2rem;
+  width: 60%;
+  margin: 0;
+  height: 7rem;
+}
+
+.avatar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.avatar .icon {
+  font-size: 3rem;
+  margin: 0 1rem;
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: var(--blue);
+}
+
+/* Ayudanos */
+#survey-button {
+  display: inline-block;
+  width: auto;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  border: 2px solid var(--green);
+  color: var(--green);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.5rem;
+  font-size: 2.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+}
+
+#survey-button:hover {
+  background-color: var(--green);
+  color: var(--white);
+  border-color: var(--white);
+}
+
+/* Footer */
+footer {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer h2 {
+  color: var(--green);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  margin: 1rem 0;
+}
+
+footer p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--black);
+  margin: 2rem 0;
+}
+
+/* Media queries */
+@media only screen and (max-width: 1500px) {
+  header {
+    margin: 4rem 10rem;
+  }
+
+  #hero-titles {
+    margin: 0 10rem;
+  }
+
+  .avatars-container {
+    margin: 10rem 0;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .section-paragraph {
+    width: 90%;
+  }
+
+  .avatar-photo {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .avatar-paragraph {
+    width: 75%;
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  header {
+    margin: 4rem 5rem;
+  }
+
+  li a {
+    margin: 0 1rem;
+  }
+
+  #hero-image,
+  #hero {
+    height: 80vh;
+  }
+
+  #hero-titles {
+    margin: 0 5rem;
+  }
+
+  .section-container {
+    margin: 10rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  li a {
+    font-size: 1.6rem;
+  }
+
+  #hero-title {
+    font-size: 6rem;
+  }
+
+  #hero-subtitle {
+    font-size: 2.4rem;
+  }
+
+  .section-title {
+    font-size: 4rem;
+  }
+
+  #survey-button {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .section-paragraph {
+    font-size: 1.6rem;
+  }
+
+  .avatars-container {
+    gap: 1rem;
+  }
+
+  .avatar-name {
+    font-size: 1.6rem;
+  }
+
+  .avatar-paragraph {
+    font-size: 1.6rem;
+    width: 100%;
+  }
+
+  .avatar .icon {
+    margin: 0 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .section-container {
+    margin: 10rem 5rem;
+  }
+
+  .avatars-container {
+    grid-auto-flow: row;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: auto;
+  }
+
+  .avatar {
+    margin: 2rem 0;
+  }
+
+  .avatar-paragraph {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    margin: 4rem 0;
+    right: auto;
+    left: 0;
+  }
+
+  header ul {
+    padding: 0 2rem;
+  }
+
+  .section-container {
+    margin: 5rem;
+  }
+
+  .avatars-container {
+    margin: 2rem 0;
+  }
+
+  #hero-titles {
+    margin: 0 2rem;
+  }
+
+  #hero-title {
+    font-size: 4rem;
+  }
+
+  #hero-subtitle {
+    font-size: 1.6rem;
+  }
+}
