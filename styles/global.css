@@ -16,6 +16,7 @@
 
 body {
   background-color: var(--black);
+  margin: 0;
 }
 
 h1,
