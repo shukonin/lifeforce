@@ -127,12 +127,23 @@ li a:hover {
 }
 
 .avatar-photo {
-  background-image: url(../assets/images/fer.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 50%;
   height: 25rem;
   width: 25rem;
+}
+
+.avatar-photo.fernando {
+  background-image: url(../assets/images/fer.jpg);
+}
+
+.avatar-photo.juancamilo {
+  background-image: url(../assets/images/juancamilo.jpg);
+}
+
+.avatar-photo.edwin {
+  background-image: url(../assets/images/edwin.jpg);
 }
 
 .avatar-name {
@@ -157,6 +168,14 @@ li a:hover {
 .avatar .icon {
   font-size: 3rem;
   margin: 0 1rem;
+}
+
+.social-media-container a:hover {
+  text-decoration: none;
+}
+
+.social-media-container a {
+  margin: 0;
 }
 
 .icon:hover {
